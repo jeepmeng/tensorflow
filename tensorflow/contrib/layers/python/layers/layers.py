@@ -1370,7 +1370,7 @@ def _build_variable_getter(rename=None):
   def layer_variable_getter(getter, *args, **kwargs):
     kwargs['rename'] = rename
     return _model_variable_getter(getter, *args, **kwargs)
-  return layer_variable_getter
+  return layer_variable_getter()
 
 
 def _add_variable_to_collections(variable, collections_set, collections_name):
